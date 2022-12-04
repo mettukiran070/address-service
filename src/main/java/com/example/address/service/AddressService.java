@@ -29,7 +29,7 @@ public class AddressService {
         return this.repository.save(address);
     }
 
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         this.repository.deleteById(id);
     }
 
