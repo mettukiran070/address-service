@@ -48,6 +48,7 @@ public class AddressController {
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteById(@PathVariable("id") Long id) {
         this.service.getById(id).orElseThrow(() -> new AddressNotFoundException());
+        this.service.deleteById(id);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
